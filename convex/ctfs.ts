@@ -1,11 +1,34 @@
 import { getAuthUserId } from "@convex-dev/auth/server";
 import { v } from "convex/values";
 
+import { type Doc } from "./_generated/dataModel";
 import { mutation, query, type MutationCtx } from "./_generated/server";
 
-const MAX_SLUG_LENGTH = 120;
+const MAX_KEY_LENGTH = 300;
 
-async function getStatsDoc(ctx: MutationCtx, slug: string) {
+type StatsFields = { up: number; down: number; difficultySum: number; difficultyCount: number };
+
+const avg = (s: { difficultySum: number; difficultyCount: number }) =>
+  s.difficultyCount > 0 ? s.difficultySum / s.difficultyCount : null;
+
+async function getChallengeStats(ctx: MutationCtx, key: string, ctfSlug: string) {
+  const existing = await ctx.db
+    .query("challengeStats")
+    .withIndex("by_key", (q) => q.eq("key", key))
+    .unique();
+  if (existing) return existing;
+  const id = await ctx.db.insert("challengeStats", {
+    key,
+    ctfSlug,
+    up: 0,
+    down: 0,
+    difficultySum: 0,
+    difficultyCount: 0,
+  });
+  return (await ctx.db.get(id))!;
+}
+
+async function getCtfStats(ctx: MutationCtx, slug: string) {
   const existing = await ctx.db
     .query("ctfStats")
     .withIndex("by_slug", (q) => q.eq("slug", slug))
@@ -21,7 +44,24 @@ async function getStatsDoc(ctx: MutationCtx, slug: string) {
   return (await ctx.db.get(id))!;
 }
 
-/** Aggregated stats for every CTF that has at least one vote or rating. */
+/** Apply the same additive delta to a challenge doc and its CTF rollup. */
+async function applyDelta(
+  ctx: MutationCtx,
+  challenge: Doc<"challengeStats">,
+  ctf: Doc<"ctfStats">,
+  delta: Partial<StatsFields>
+) {
+  const patch = (doc: StatsFields) => ({
+    up: doc.up + (delta.up ?? 0),
+    down: doc.down + (delta.down ?? 0),
+    difficultySum: doc.difficultySum + (delta.difficultySum ?? 0),
+    difficultyCount: doc.difficultyCount + (delta.difficultyCount ?? 0),
+  });
+  await ctx.db.patch(challenge._id, patch(challenge));
+  await ctx.db.patch(ctf._id, patch(ctf));
+}
+
+/** Rollup stats for every CTF that has any activity (for the explorer grid). */
 export const allStats = query({
   args: {},
   handler: async (ctx) => {
@@ -30,119 +70,131 @@ export const allStats = query({
       slug: s.slug,
       up: s.up,
       down: s.down,
-      difficulty: s.difficultyCount > 0 ? s.difficultySum / s.difficultyCount : null,
+      difficulty: avg(s),
       ratings: s.difficultyCount,
     }));
   },
 });
 
-/** Stats for a single CTF plus the current user's own vote/rating. */
-export const ctfStats = query({
+/** Per-challenge stats for one CTF, plus the current user's own votes/ratings. */
+export const ctfChallengeStats = query({
   args: { slug: v.string() },
   handler: async (ctx, { slug }) => {
-    const stats = await ctx.db
+    const rows = await ctx.db
+      .query("challengeStats")
+      .withIndex("by_ctf", (q) => q.eq("ctfSlug", slug))
+      .collect();
+
+    const challenges: Record<string, { up: number; down: number; difficulty: number | null; ratings: number }> = {};
+    for (const r of rows) {
+      challenges[r.key] = { up: r.up, down: r.down, difficulty: avg(r), ratings: r.difficultyCount };
+    }
+
+    const myVotes: Record<string, 1 | -1> = {};
+    const myRatings: Record<string, number> = {};
+    const userId = await getAuthUserId(ctx);
+    if (userId) {
+      const votes = await ctx.db
+        .query("challengeVotes")
+        .withIndex("by_user_ctf", (q) => q.eq("userId", userId).eq("ctfSlug", slug))
+        .collect();
+      for (const v of votes) myVotes[v.key] = v.value;
+      const ratings = await ctx.db
+        .query("challengeRatings")
+        .withIndex("by_user_ctf", (q) => q.eq("userId", userId).eq("ctfSlug", slug))
+        .collect();
+      for (const r of ratings) myRatings[r.key] = r.difficulty;
+    }
+
+    const rollup = await ctx.db
       .query("ctfStats")
       .withIndex("by_slug", (q) => q.eq("slug", slug))
       .unique();
 
-    const userId = await getAuthUserId(ctx);
-    let myVote: 1 | -1 | null = null;
-    let myDifficulty: number | null = null;
-    if (userId) {
-      const vote = await ctx.db
-        .query("votes")
-        .withIndex("by_user_slug", (q) => q.eq("userId", userId).eq("slug", slug))
-        .unique();
-      myVote = vote?.value ?? null;
-      const rating = await ctx.db
-        .query("ratings")
-        .withIndex("by_user_slug", (q) => q.eq("userId", userId).eq("slug", slug))
-        .unique();
-      myDifficulty = rating?.difficulty ?? null;
-    }
-
     return {
-      up: stats?.up ?? 0,
-      down: stats?.down ?? 0,
-      difficulty: stats && stats.difficultyCount > 0 ? stats.difficultySum / stats.difficultyCount : null,
-      ratings: stats?.difficultyCount ?? 0,
-      myVote,
-      myDifficulty,
+      challenges,
+      myVotes,
+      myRatings,
+      summary: {
+        up: rollup?.up ?? 0,
+        down: rollup?.down ?? 0,
+        difficulty: rollup ? avg(rollup) : null,
+        ratings: rollup?.difficultyCount ?? 0,
+      },
     };
   },
 });
 
-/**
- * Cast, change or remove a vote on a CTF.
- * value: 1 = upvote, -1 = downvote, 0 = remove vote.
- */
-export const vote = mutation({
+/** Cast, change or remove a vote on a challenge. value 0 removes the vote. */
+export const voteChallenge = mutation({
   args: {
-    slug: v.string(),
+    ctfSlug: v.string(),
+    key: v.string(),
     value: v.union(v.literal(1), v.literal(-1), v.literal(0)),
   },
-  handler: async (ctx, { slug, value }) => {
+  handler: async (ctx, { ctfSlug, key, value }) => {
     const userId = await getAuthUserId(ctx);
     if (!userId) throw new Error("Not authenticated");
-    if (slug.length === 0 || slug.length > MAX_SLUG_LENGTH) throw new Error("Invalid slug");
+    if (key.length === 0 || key.length > MAX_KEY_LENGTH) throw new Error("Invalid challenge");
 
     const existing = await ctx.db
-      .query("votes")
-      .withIndex("by_user_slug", (q) => q.eq("userId", userId).eq("slug", slug))
+      .query("challengeVotes")
+      .withIndex("by_user_key", (q) => q.eq("userId", userId).eq("key", key))
       .unique();
     if ((existing?.value ?? 0) === value) return;
 
-    const stats = await getStatsDoc(ctx, slug);
-    let { up, down } = stats;
+    const challenge = await getChallengeStats(ctx, key, ctfSlug);
+    const ctf = await getCtfStats(ctx, ctfSlug);
+
+    const delta: Partial<StatsFields> = {};
     if (existing) {
-      if (existing.value === 1) up--;
-      else down--;
+      if (existing.value === 1) delta.up = (delta.up ?? 0) - 1;
+      else delta.down = (delta.down ?? 0) - 1;
     }
     if (value === 0) {
       if (existing) await ctx.db.delete(existing._id);
     } else {
-      if (value === 1) up++;
-      else down++;
+      if (value === 1) delta.up = (delta.up ?? 0) + 1;
+      else delta.down = (delta.down ?? 0) + 1;
       if (existing) await ctx.db.patch(existing._id, { value });
-      else await ctx.db.insert("votes", { userId, slug, value });
+      else await ctx.db.insert("challengeVotes", { userId, ctfSlug, key, value });
     }
-    await ctx.db.patch(stats._id, { up, down });
+    await applyDelta(ctx, challenge, ctf, delta);
   },
 });
 
-/**
- * Set or remove the difficulty rating for a CTF.
- * difficulty: 1-5, or 0 to remove the rating.
- */
-export const rate = mutation({
-  args: { slug: v.string(), difficulty: v.number() },
-  handler: async (ctx, { slug, difficulty }) => {
+/** Set or remove a difficulty rating (1-5) on a challenge. 0 removes it. */
+export const rateChallenge = mutation({
+  args: { ctfSlug: v.string(), key: v.string(), difficulty: v.number() },
+  handler: async (ctx, { ctfSlug, key, difficulty }) => {
     const userId = await getAuthUserId(ctx);
     if (!userId) throw new Error("Not authenticated");
-    if (slug.length === 0 || slug.length > MAX_SLUG_LENGTH) throw new Error("Invalid slug");
+    if (key.length === 0 || key.length > MAX_KEY_LENGTH) throw new Error("Invalid challenge");
     if (!Number.isInteger(difficulty) || difficulty < 0 || difficulty > 5)
       throw new Error("Difficulty must be an integer between 0 and 5");
 
     const existing = await ctx.db
-      .query("ratings")
-      .withIndex("by_user_slug", (q) => q.eq("userId", userId).eq("slug", slug))
+      .query("challengeRatings")
+      .withIndex("by_user_key", (q) => q.eq("userId", userId).eq("key", key))
       .unique();
     if ((existing?.difficulty ?? 0) === difficulty) return;
 
-    const stats = await getStatsDoc(ctx, slug);
-    let { difficultySum, difficultyCount } = stats;
+    const challenge = await getChallengeStats(ctx, key, ctfSlug);
+    const ctf = await getCtfStats(ctx, ctfSlug);
+
+    const delta: Partial<StatsFields> = {};
     if (existing) {
-      difficultySum -= existing.difficulty;
-      difficultyCount--;
+      delta.difficultySum = (delta.difficultySum ?? 0) - existing.difficulty;
+      delta.difficultyCount = (delta.difficultyCount ?? 0) - 1;
     }
     if (difficulty === 0) {
       if (existing) await ctx.db.delete(existing._id);
     } else {
-      difficultySum += difficulty;
-      difficultyCount++;
+      delta.difficultySum = (delta.difficultySum ?? 0) + difficulty;
+      delta.difficultyCount = (delta.difficultyCount ?? 0) + 1;
       if (existing) await ctx.db.patch(existing._id, { difficulty });
-      else await ctx.db.insert("ratings", { userId, slug, difficulty });
+      else await ctx.db.insert("challengeRatings", { userId, ctfSlug, key, difficulty });
     }
-    await ctx.db.patch(stats._id, { difficultySum, difficultyCount });
+    await applyDelta(ctx, challenge, ctf, delta);
   },
 });

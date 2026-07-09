@@ -17,7 +17,7 @@ function SiteLayout({ children }: Props) {
           <Wordmark className="[&>span:last-child]:font-normal [&>span:last-child]:text-muted-foreground" />
           <ExternalLink
             className="transition-colors hover:text-brand"
-            href="https://github.com/kapeka0/ctf-archives-explorer"
+            href="https://github.com/kapeka0/ctf-archives-frontend"
             rel="noopener noreferrer"
             target="_blank"
           >

@@ -1,7 +1,7 @@
 {
   "Auth": {
     "welcome": "Welcome back",
-    "welcomeMessage": "Sign in to vote and rate CTFs",
+    "welcomeMessage": "Sign in to vote and rate challenges",
     "signIn": "Sign in",
     "signInSuccess": "Signed in!",
     "email": "Email",
@@ -12,7 +12,7 @@
     "signUp": "Sign up",
     "loginError": "Invalid email or password",
     "join": "Join CTF Archives",
-    "joinMessage": "Create an account to vote and rate CTFs",
+    "joinMessage": "Create an account to vote and rate challenges",
     "strongPassword": "Choose a strong password",
     "confirmPassword": "Confirm your password",
     "preTerms": "I agree to the ",
@@ -23,7 +23,7 @@
     "passwordMismatch": "Passwords do not match",
     "acceptTerms": "You must accept the terms and conditions",
     "username": "Username",
-    "usernamePlaceholder": "Jack Sparrow",
+    "usernamePlaceholder": "jack_sparrow",
     "signUpSuccess": "Sign up successful!",
     "emailSent": "You have successfully signed up. Please check your email to verify your account.",
     "resendEmail": "Resend email",
@@ -33,12 +33,13 @@
     "or": "or",
     "errors": {
       "unexpected": "An unexpected error occurred.",
+      "existingUser": "Username already taken.",
       "existingEmail": "Email already in use.",
       "existingEmailDesc": "Email already in use, please sign in."
     },
-
     "zod": {
       "email": "Invalid email",
+      "usernameChars": "Use only letters, numbers and underscores",
       "passwordMatch": "Passwords do not match",
       "required": "This field is required",
       "passwordRestriction": "Password must contain at least one uppercase letter, one lowercase letter and one number",
@@ -68,11 +69,13 @@
     "yourVote": "Your vote",
     "signInToVote": "Sign in to vote and rate difficulty",
     "voteError": "Could not save your vote",
-    "yearJump": "Jump to edition"
+    "yearJump": "Jump to edition",
+    "average": "Average",
+    "net": "net",
+    "rateHint": "Vote and rate each challenge below."
   },
   "Global": {
     "title": "CTF Archives",
-
     "theme": "Theme",
     "light": "Light",
     "dark": "Dark",
@@ -97,7 +100,11 @@
     "sortVotes": "Top voted",
     "sortChallenges": "Most challenges",
     "noResults": "No CTFs match your search.",
-    "showing": "Showing {shown} of {total} CTFs"
+    "showing": "Showing {shown} of {total} CTFs",
+    "filterArchive": "Archive",
+    "filterCommunity": "Community",
+    "submitCta": "Submit a CTF",
+    "communityEmpty": "No community submissions yet. Be the first."
   },
   "LandingPage": {
     "title": "CTF Archive",
@@ -118,7 +125,7 @@
   "Submit": {
     "eyebrow": "submit",
     "title": "Submit a CTF",
-    "subtitle": "Add a competition you played. It shows up for everyone once you submit.",
+    "subtitle": "Add a competition you played — no account needed. It shows up for everyone once you submit.",
     "name": "Name",
     "year": "Year",
     "url": "Link (optional)",
@@ -131,7 +138,6 @@
     "required": "Required",
     "yearError": "Enter a four-digit year",
     "urlError": "Enter a valid URL",
-    "needAccount": "You need an account to submit a CTF.",
     "signIn": "Sign in"
   }
 }

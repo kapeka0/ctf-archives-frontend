@@ -1,8 +1,11 @@
+import { ArrowUpRight, Plus } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
-import CommunitySubmissions from "@/components/ctf/CommunitySubmissions";
 import CtfExplorer from "@/components/ctf/CtfExplorer";
+import { Button } from "@/components/ui/button";
+import ExternalLink from "@/components/ui/external-link";
 import MaxWidthWrapper from "@/components/ui/MaxWidthWrapper";
+import { Link } from "@/i18n/routing";
 import { getCtfIndex } from "@/lib/ctf/data";
 
 type Props = {
@@ -37,6 +40,22 @@ export default async function Home({ params }: Props) {
         </h1>
         <p className="mt-5 max-w-xl text-pretty leading-relaxed text-muted-foreground">{t("subtitle")}</p>
 
+        <div className="mt-7 flex flex-wrap items-center gap-3">
+          <Link href="/submit">
+            <Button className="gap-1.5 rounded-full" size="sm">
+              <Plus className="size-4" />
+              {t("submitCta")}
+            </Button>
+          </Link>
+          <ExternalLink
+            className="flex items-center gap-1 font-mono text-xs text-muted-foreground transition-colors hover:text-foreground"
+            href="#explore"
+          >
+            {t("filterArchive")}
+            <ArrowUpRight className="size-3" />
+          </ExternalLink>
+        </div>
+
         <dl className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 font-mono text-sm">
           {ledger.map((stat, i) => (
             <div className="flex items-baseline gap-2" key={stat.label}>
@@ -49,9 +68,8 @@ export default async function Home({ params }: Props) {
         </dl>
       </section>
 
-      <hr className="my-12 border-border" />
+      <hr className="my-12 border-border" id="explore" />
 
-      <CommunitySubmissions />
       <CtfExplorer ctfs={index.ctfs} />
     </MaxWidthWrapper>
   );

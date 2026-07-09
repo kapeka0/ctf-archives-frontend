@@ -25,6 +25,9 @@ importers:
       "@next/mdx":
         specifier: ^16.2.9
         version: 16.2.9(@mdx-js/loader@3.1.1)(@mdx-js/react@3.1.1(@types/react@19.2.17)(react@19.2.7))
+      "@outpacelabs/avatars":
+        specifier: ^0.2.1
+        version: 0.2.1(react@19.2.7)
       "@radix-ui/react-avatar":
         specifier: ^1.2.0
         version: 1.2.0(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
@@ -1362,6 +1365,12 @@ packages:
   "@oslojs/encoding@1.1.0":
     resolution:
       { integrity: sha512-70wQhgYmndg4GCPxPPxPGevRKqTIJ2Nh4OkiMWmDAVYsTQ+Ta7Sq+rPevXyXGdzr30/qZBnyOalCszoMxlyldQ== }
+
+  "@outpacelabs/avatars@0.2.1":
+    resolution:
+      { integrity: sha512-TjwWJdc55eZ4ohP9nmQlCuPmFbT/fD1z4GRGGAbouzW3t46nXqQu6/GgtNUXxoqJ8Iv6RuqebnVfCfCTSnfu6Q== }
+    peerDependencies:
+      react: ">=18"
 
   "@panva/hkdf@1.2.1":
     resolution:
@@ -7131,6 +7140,10 @@ snapshots:
       "@oslojs/binary": 1.0.0
 
   "@oslojs/encoding@1.1.0": {}
+
+  "@outpacelabs/avatars@0.2.1(react@19.2.7)":
+    dependencies:
+      react: 19.2.7
 
   "@panva/hkdf@1.2.1": {}
 

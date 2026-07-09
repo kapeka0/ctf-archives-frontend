@@ -1,7 +1,7 @@
 {
   "Auth": {
     "welcome": "Bienvenido de nuevo",
-    "welcomeMessage": "Inicia sesión para votar y valorar CTFs",
+    "welcomeMessage": "Inicia sesión para votar y valorar retos",
     "signIn": "Iniciar sesión",
     "signInSuccess": "¡Sesión iniciada!",
     "email": "Correo electrónico",
@@ -12,7 +12,7 @@
     "signUp": "Regístrate",
     "loginError": "Correo electrónico o contraseña inválidos",
     "join": "Únete a CTF Archives",
-    "joinMessage": "Crea una cuenta para votar y valorar CTFs",
+    "joinMessage": "Crea una cuenta para votar y valorar retos",
     "strongPassword": "Selecciona una contraseña segura",
     "confirmPassword": "Confirma tu contraseña",
     "preTerms": "Estoy de acuerdo con los ",
@@ -23,9 +23,8 @@
     "passwordMismatch": "Las contraseñas no coinciden",
     "acceptTerms": "Debes aceptar los términos y condiciones",
     "username": "Nombre de usuario",
-    "usernamePlaceholder": "Jack Sparrow",
+    "usernamePlaceholder": "jack_sparrow",
     "signUpSuccess": "¡Registro exitoso!",
-
     "emailSent": "Te has registrado con éxito. Por favor, revisa tu correo electrónico para verificar tu cuenta.",
     "resendEmail": "Reenviar correo electrónico",
     "resendEmailSuccess": "Correo electrónico reenviado",
@@ -35,9 +34,9 @@
     "errors": {
       "unexpected": "Ocurrió un error inesperado.",
       "existingEmail": "Correo electrónico en uso.",
-      "existingEmailDesc": "Correo electrónico en uso, por favor inicie sesión."
+      "existingEmailDesc": "Correo electrónico en uso, por favor inicie sesión.",
+      "existingUser": "Ese nombre de usuario ya existe."
     },
-
     "zod": {
       "email": "Correo electrónico inválido",
       "passwordMatch": "Las contraseñas no coinciden",
@@ -49,7 +48,8 @@
       "passwordSpecial": "La contraseña debe contener al menos un carácter especial",
       "required": "Este campo es requerido",
       "passwordRestriction": "La contraseña debe contener al menos una mayúscula, una minúscula y un número",
-      "usernameLength": "El nombre  debe tener entre 3 y 20 caracteres."
+      "usernameLength": "El nombre  debe tener entre 3 y 20 caracteres.",
+      "usernameChars": "Usa solo letras, números y guiones bajos"
     }
   },
   "Ctf": {
@@ -69,7 +69,10 @@
     "yourVote": "Tu voto",
     "signInToVote": "Inicia sesión para votar y valorar la dificultad",
     "voteError": "No se pudo guardar tu voto",
-    "yearJump": "Ir a la edición"
+    "yearJump": "Ir a la edición",
+    "average": "Media",
+    "net": "neto",
+    "rateHint": "Vota y valora cada reto abajo."
   },
   "Global": {
     "title": "CTF Archives",
@@ -97,7 +100,11 @@
     "sortVotes": "Más votados",
     "sortChallenges": "Más retos",
     "noResults": "Ningún CTF coincide con tu búsqueda.",
-    "showing": "Mostrando {shown} de {total} CTFs"
+    "showing": "Mostrando {shown} de {total} CTFs",
+    "filterArchive": "Archivo",
+    "filterCommunity": "Comunidad",
+    "submitCta": "Subir un CTF",
+    "communityEmpty": "Aún no hay CTFs de la comunidad. Sé el primero."
   },
   "LandingPage": {
     "title": "CTF Archive",
@@ -118,7 +125,7 @@
   "Submit": {
     "eyebrow": "subir",
     "title": "Subir un CTF",
-    "subtitle": "Añade una competición que jugaste. Aparecerá para todos en cuanto la envíes.",
+    "subtitle": "Añade una competición que jugaste — sin cuenta. Aparecerá para todos en cuanto la envíes.",
     "name": "Nombre",
     "year": "Año",
     "url": "Enlace (opcional)",
@@ -131,7 +138,6 @@
     "required": "Obligatorio",
     "yearError": "Introduce un año de cuatro dígitos",
     "urlError": "Introduce una URL válida",
-    "needAccount": "Necesitas una cuenta para subir un CTF.",
     "signIn": "Iniciar sesión"
   }
 }

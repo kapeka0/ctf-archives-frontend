@@ -1,8 +1,9 @@
 "use client";
 
 import { useAuthActions } from "@convex-dev/auth/react";
+import { GradientAvatar } from "@outpacelabs/avatars";
 import { Authenticated, Unauthenticated, useQuery } from "convex/react";
-import { LogOut, Plus, User } from "lucide-react";
+import { LogOut } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 import LangToggle from "@/components/global/LangToggle";
@@ -24,17 +25,22 @@ function UserMenu() {
   const t = useTranslations("Nav");
   const { signOut } = useAuthActions();
   const viewer = useQuery(api.users.viewer);
+  const username = viewer?.username ?? "";
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button className="size-8 rounded-full" size="icon" variant="ghost">
-          <User className="size-4" />
-        </Button>
+        <button
+          className="ml-1 rounded-full outline-none ring-offset-background transition-opacity hover:opacity-80 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+          type="button"
+        >
+          <GradientAvatar seed={username || "guest"} size={28} radius="9999px" />
+        </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuLabel className="max-w-52 truncate font-mono text-xs font-normal text-muted-foreground">
-          {viewer?.email ?? t("account")}
+        <DropdownMenuLabel className="flex items-center gap-2 font-normal">
+          <GradientAvatar seed={username || "guest"} size={22} radius="9999px" />
+          <span className="max-w-40 truncate font-mono text-xs">{username || t("account")}</span>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuItem className="cursor-pointer" onClick={() => void signOut()}>
@@ -56,12 +62,6 @@ function SiteNavbar() {
           <Wordmark />
         </Link>
         <div className="flex items-center gap-0.5">
-          <Link href="/submit">
-            <Button className="h-8 gap-1.5 rounded-full px-3 text-xs" size="sm" variant="ghost">
-              <Plus className="size-3.5" />
-              <span className="hidden sm:inline">{t("submit")}</span>
-            </Button>
-          </Link>
           <ThemeToggle />
           <LangToggle />
           <Unauthenticated>

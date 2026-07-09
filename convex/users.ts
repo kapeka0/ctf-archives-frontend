@@ -10,6 +10,6 @@ export const viewer = query({
     if (!userId) return null;
     const user = await ctx.db.get(userId);
     if (!user) return null;
-    return { email: user.email ?? null, name: user.name ?? null };
+    return { username: user.name ?? user.email ?? "user" };
   },
 });

@@ -22,25 +22,20 @@ function SignInForm() {
   const [isPending, setIsPending] = useState(false);
 
   const formSchema = z.object({
-    email: z.string().email({
-      message: tAuth("invalidEmail"),
-    }),
-    password: z.string(),
+    username: z.string().min(1),
+    password: z.string().min(1),
   });
   const form = useForm<z.infer<typeof formSchema>>({
     mode: "onChange",
     resolver: zodResolver(formSchema),
-    defaultValues: {
-      email: "",
-      password: "",
-    },
+    defaultValues: { username: "", password: "" },
   });
 
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
     setIsPending(true);
     try {
       await signIn("password", {
-        email: data.email,
+        email: data.username.trim().toLowerCase(),
         password: data.password,
         flow: "signIn",
       });
@@ -60,17 +55,17 @@ function SignInForm() {
         <form className="space-y-3 w-full" onSubmit={form.handleSubmit(onSubmit)}>
           <FormField
             control={form.control}
-            name="email"
+            name="username"
             render={({ field }) => (
               <FormItem className="space-y-0">
-                <FormLabel className="text-sm text-muted-foreground font-normal">{tAuth("email")}</FormLabel>
+                <FormLabel className="text-sm text-muted-foreground font-normal">{tAuth("username")}</FormLabel>
                 <FormControl>
                   <Input
+                    autoCapitalize="none"
                     disabled={isPending}
-                    placeholder="arnold@schwarzenegger.com"
+                    placeholder={tAuth("usernamePlaceholder")}
                     {...field}
                     className="placeholder:text-muted-foreground/50"
-                    type="email"
                   />
                 </FormControl>
                 <FormMessage />

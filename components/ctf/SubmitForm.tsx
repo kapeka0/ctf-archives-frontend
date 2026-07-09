@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useConvexAuth, useMutation } from "convex/react";
+import { useMutation } from "convex/react";
 import { Loader2 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
@@ -13,12 +13,11 @@ import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { api } from "@/convex/_generated/api";
-import { Link, useRouter } from "@/i18n/routing";
+import { useRouter } from "@/i18n/routing";
 
 function SubmitForm() {
   const t = useTranslations("Submit");
   const router = useRouter();
-  const { isAuthenticated, isLoading } = useConvexAuth();
   const submit = useMutation(api.submissions.submit);
   const [pending, setPending] = useState(false);
 
@@ -56,19 +55,6 @@ function SubmitForm() {
       setPending(false);
     }
   };
-
-  if (isLoading) return null;
-
-  if (!isAuthenticated) {
-    return (
-      <p className="rounded-lg border border-border bg-card p-4 text-sm text-muted-foreground">
-        {t("needAccount")}{" "}
-        <Link className="text-brand hover:underline" href="/sign-in">
-          {t("signIn")}
-        </Link>
-      </p>
-    );
-  }
 
   const fields = [
     { name: "name" as const, label: t("name"), placeholder: "DEF CON CTF" },

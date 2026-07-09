@@ -21,7 +21,7 @@ export const list = query({
   },
 });
 
-/** Submit a CTF. Requires an account. */
+/** Submit a CTF. No account required. */
 export const submit = mutation({
   args: {
     name: v.string(),
@@ -31,8 +31,7 @@ export const submit = mutation({
     notes: v.optional(v.string()),
   },
   handler: async (ctx, args) => {
-    const userId = await getAuthUserId(ctx);
-    if (!userId) throw new Error("Not authenticated");
+    const userId = (await getAuthUserId(ctx)) ?? undefined;
 
     const name = args.name.trim();
     const year = args.year.trim();
