@@ -14,7 +14,7 @@ function SignInPage() {
           {tAuth("signIn")}
         </p>
         <h1 className="text-2xl font-semibold tracking-tight">{tAuth("welcome")}</h1>
-        <p className="text-sm text-muted-foreground">{tAuth("welcomeMessage")}</p>
+        <p className="text-base text-muted-foreground">{tAuth("welcomeMessage")}</p>
       </div>
 
       <div className="mt-7">

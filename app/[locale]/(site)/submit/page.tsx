@@ -25,7 +25,7 @@ export default async function SubmitPage({ params }: Props) {
         {t("eyebrow")}
       </p>
       <h1 className="mt-3 text-3xl font-semibold tracking-tight">{t("title")}</h1>
-      <p className="mt-2 mb-8 text-muted-foreground">{t("subtitle")}</p>
+      <p className="mt-2 mb-8 text-lg text-muted-foreground">{t("subtitle")}</p>
       <SubmitForm />
     </MaxWidthWrapper>
   );

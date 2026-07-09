@@ -35,7 +35,7 @@ export default async function Home({ params }: Props) {
             <span className="text-brand">{"}"}</span>
           </span>
         </h1>
-        <p className="mx-auto mt-5 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">{t("subtitle")}</p>
+        <p className="mx-auto mt-5 max-w-xl text-pretty text-xl leading-relaxed text-muted-foreground">{t("subtitle")}</p>
 
         <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
           <Link href="/submit">

@@ -14,7 +14,7 @@ function SignUpPage() {
           {tAuth("signUp")}
         </p>
         <h1 className="text-2xl font-semibold tracking-tight">{tAuth("join")}</h1>
-        <p className="text-sm text-muted-foreground">{tAuth("joinMessage")}</p>
+        <p className="text-base text-muted-foreground">{tAuth("joinMessage")}</p>
       </div>
 
       <div className="mt-7">

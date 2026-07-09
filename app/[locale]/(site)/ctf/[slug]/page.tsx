@@ -46,7 +46,7 @@ export default async function CtfPage({ params }: Props) {
 
       <header className="mt-6 border-b border-border pb-8">
         <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">{detail.name}</h1>
-        <p className="mt-2 font-mono text-sm text-muted-foreground">
+        <p className="mt-2 font-mono text-base text-muted-foreground">
           {detail.years.length} {t("editions")}
           <span className="mx-2 text-border">·</span>
           {totalChallenges} {t("challenges")}

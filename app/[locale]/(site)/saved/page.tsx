@@ -29,7 +29,7 @@ function SavedPage() {
       {(!favorites || favorites.length === 0) ? (
         <div className="mt-16 flex flex-col items-center gap-4 text-center">
           <Bookmark className="size-10 text-muted-foreground/30" />
-          <p className="max-w-sm text-muted-foreground">{t("empty")}</p>
+          <p className="max-w-sm text-lg text-muted-foreground">{t("empty")}</p>
           <Link href="/">
             <Button variant="outline" size="sm">
               {t("browseCta")}
