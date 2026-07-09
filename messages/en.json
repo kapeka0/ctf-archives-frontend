@@ -113,8 +113,8 @@
     "filterArchive": "Archive",
     "filterCommunity": "Community",
     "filterCategory": "All categories",
-    "submitCta": "Submit a CTF",
-    "communityEmpty": "No community submissions yet. Be the first."
+    "submitCta": "Share a challenge",
+    "communityEmpty": "No community challenges yet. Be the first to share one."
   },
   "LandingPage": {
     "title": "CTF Archives",
@@ -127,23 +127,23 @@
   },
   "Nav": {
     "brand": "CTF Archives",
-    "submit": "Submit",
+    "submit": "Share",
     "signIn": "Sign in",
     "signOut": "Sign out",
     "account": "Account",
     "savedChallenges": "Saved challenges"
   },
   "Submit": {
-    "eyebrow": "submit",
-    "title": "Submit a CTF",
-    "subtitle": "Add a competition you played — no account needed. It shows up for everyone once you submit.",
+    "eyebrow": "share",
+    "title": "Share a challenge",
+    "subtitle": "Upload a challenge you created — no account needed. It shows up for everyone once you submit.",
     "name": "Name",
     "year": "Year",
     "url": "Link",
     "categories": "Categories",
     "notes": "Notes (optional)",
-    "notesPlaceholder": "Anything worth knowing about this CTF",
-    "cta": "Submit CTF",
+    "notesPlaceholder": "Hints, context, or anything useful about your challenge",
+    "cta": "Share challenge",
     "success": "Submitted. Thanks!",
     "error": "Could not submit. Try again.",
     "required": "Required",

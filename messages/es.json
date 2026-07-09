@@ -113,8 +113,8 @@
     "filterArchive": "Archivo",
     "filterCommunity": "Comunidad",
     "filterCategory": "Todas las categorías",
-    "submitCta": "Subir un CTF",
-    "communityEmpty": "Aún no hay CTFs de la comunidad. Sé el primero."
+    "submitCta": "Compartir un reto",
+    "communityEmpty": "Aún no hay retos de la comunidad. Sé el primero en compartir uno."
   },
   "LandingPage": {
     "title": "CTF Archives",
@@ -127,23 +127,23 @@
   },
   "Nav": {
     "brand": "CTF Archives",
-    "submit": "Subir",
+    "submit": "Compartir",
     "signIn": "Iniciar sesión",
     "signOut": "Cerrar sesión",
     "account": "Cuenta",
     "savedChallenges": "Retos guardados"
   },
   "Submit": {
-    "eyebrow": "subir",
-    "title": "Subir un CTF",
-    "subtitle": "Añade una competición que jugaste — sin cuenta. Aparecerá para todos en cuanto la envíes.",
+    "eyebrow": "compartir",
+    "title": "Compartir un reto",
+    "subtitle": "Sube un challenge que hayas creado — sin cuenta. Aparecerá para todos en cuanto lo envíes.",
     "name": "Nombre",
     "year": "Año",
     "url": "Enlace",
     "categories": "Categorías",
     "notes": "Notas (opcional)",
-    "notesPlaceholder": "Cualquier cosa que merezca saberse de este CTF",
-    "cta": "Subir CTF",
+    "notesPlaceholder": "Pistas, contexto o cualquier cosa útil sobre tu reto",
+    "cta": "Compartir reto",
     "success": "¡Subido, gracias!",
     "error": "No se pudo subir. Inténtalo de nuevo.",
     "required": "Obligatorio",
