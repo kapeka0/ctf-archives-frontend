@@ -43,10 +43,15 @@ function SignInForm() {
       toast.success(tAuth("signInSuccess"));
       router.push("/");
     } catch (error) {
-      const message = error instanceof Error ? error.message : "";
-      if (message.includes("Could not find") || message.includes("Invalid") || message.includes("password")) {
-        form.setError("password", { type: "manual", message: tAuth("loginError") });
-        toast.error(tAuth("loginError"));
+      const msg = error instanceof Error ? error.message : "";
+      if (msg.includes("InvalidAccountId") || msg.includes("Could not find")) {
+        form.setError("username", { type: "manual", message: tError("userNotFound") });
+        toast.error(tError("userNotFound"));
+      } else if (msg.includes("InvalidSecret") || msg.includes("Invalid credentials")) {
+        form.setError("password", { type: "manual", message: tError("wrongPassword") });
+        toast.error(tError("wrongPassword"));
+      } else if (msg.includes("TooManyFailedAttempts")) {
+        toast.error(tError("tooManyAttempts"));
       } else {
         toast.error(tError("unexpected"));
       }

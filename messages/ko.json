@@ -32,10 +32,14 @@
     "google": "Google로 계속하기",
     "or": "또는",
     "errors": {
-      "unexpected": "예기치 않은 오류가 발생했습니다.",
-      "existingUser": "이미 사용 중인 사용자 이름입니다.",
+      "unexpected": "예기치 않은 오류가 발생했습니다. 다시 시도해 주세요.",
+      "existingUser": "이미 사용 중인 사용자 이름입니다. 다른 이름을 사용해 주세요.",
       "existingEmail": "이미 사용 중인 이메일입니다.",
-      "existingEmailDesc": "이미 등록된 이메일입니다. 로그인해 주세요."
+      "existingEmailDesc": "이미 등록된 이메일입니다. 로그인해 주세요.",
+      "userNotFound": "해당 사용자 이름으로 등록된 계정이 없습니다.",
+      "wrongPassword": "비밀번호가 올바르지 않습니다. 다시 시도해 주세요.",
+      "tooManyAttempts": "로그인 시도가 너무 많습니다. 잠시 후 다시 시도해 주세요.",
+      "invalidPassword": "비밀번호는 8자 이상이어야 합니다."
     },
     "zod": {
       "email": "유효하지 않은 이메일",

@@ -58,12 +58,17 @@ function SignUpForm() {
       toast.success(tAuth("signUpSuccess"));
       router.push("/");
     } catch (error) {
-      const message = error instanceof Error ? error.message : "";
-      if (message.includes("already") || message.includes("exists")) {
+      const msg = error instanceof Error ? error.message : "";
+      if (msg.includes("already exists")) {
         form.setError("username", { type: "manual", message: tError("existingUser") });
-        toast.error(tError("existingUser"), { duration: 1500 });
+        toast.error(tError("existingUser"));
+      } else if (msg.includes("Invalid password")) {
+        form.setError("password", { type: "manual", message: tError("invalidPassword") });
+        toast.error(tError("invalidPassword"));
+      } else if (msg.includes("TooManyFailedAttempts")) {
+        toast.error(tError("tooManyAttempts"));
       } else {
-        toast.error(tError("unexpected"), { duration: 1500 });
+        toast.error(tError("unexpected"));
       }
     } finally {
       setIsPending(false);

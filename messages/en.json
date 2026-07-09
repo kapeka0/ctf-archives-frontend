@@ -32,10 +32,14 @@
     "google": "Continue with Google",
     "or": "or",
     "errors": {
-      "unexpected": "An unexpected error occurred.",
-      "existingUser": "Username already taken.",
+      "unexpected": "An unexpected error occurred. Please try again.",
+      "existingUser": "That username is already taken. Try a different one.",
       "existingEmail": "Email already in use.",
-      "existingEmailDesc": "Email already in use, please sign in."
+      "existingEmailDesc": "Email already in use, please sign in.",
+      "userNotFound": "No account found with that username.",
+      "wrongPassword": "Incorrect password. Please try again.",
+      "tooManyAttempts": "Too many failed attempts. Please wait a moment and try again.",
+      "invalidPassword": "Password must be at least 8 characters long."
     },
     "zod": {
       "email": "Invalid email",

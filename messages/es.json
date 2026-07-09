@@ -32,10 +32,14 @@
     "google": "Continuar con Google",
     "or": "o",
     "errors": {
-      "unexpected": "Ocurrió un error inesperado.",
+      "unexpected": "Ocurrió un error inesperado. Inténtalo de nuevo.",
       "existingEmail": "Correo electrónico en uso.",
       "existingEmailDesc": "Correo electrónico en uso, por favor inicie sesión.",
-      "existingUser": "Ese nombre de usuario ya existe."
+      "existingUser": "Ese nombre de usuario ya está en uso. Prueba con otro.",
+      "userNotFound": "No existe una cuenta con ese nombre de usuario.",
+      "wrongPassword": "Contraseña incorrecta. Inténtalo de nuevo.",
+      "tooManyAttempts": "Demasiados intentos fallidos. Espera un momento e inténtalo de nuevo.",
+      "invalidPassword": "La contraseña debe tener al menos 8 caracteres."
     },
     "zod": {
       "email": "Correo electrónico inválido",
