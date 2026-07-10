@@ -10,10 +10,6 @@ const nextConfig: NextConfig = {
   experimental: {
     useCache: true,
   },
-  outputFileTracingIncludes: {
-    "/[locale]/ctf/[slug]": ["./data/generated/**/*.json"],
-    "/[locale]": ["./data/generated/index.json"],
-  },
 };
 
 export default withNextIntl(nextConfig);
