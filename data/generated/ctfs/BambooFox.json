@@ -1,18 +1,1 @@
-{
-  "ctftime": "https://ctftime.org/ctf/394",
-  "name": "BambooFox",
-  "slug": "BambooFox",
-  "years": [
-    {
-      "year": "2021",
-      "ctftime": "https://ctftime.org/event/1234",
-      "challenges": [
-        { "name": "babystack", "category": "misc", "path": "BambooFox/2021/babystack", "files": 6 },
-        { "name": "HouseOfCSY", "category": "misc", "path": "BambooFox/2021/HouseOfCSY", "files": 6 },
-        { "name": "ropot", "category": "misc", "path": "BambooFox/2021/ropot", "files": 7 },
-        { "name": "wxpage", "category": "misc", "path": "BambooFox/2021/wxpage", "files": 7 }
-      ],
-      "categories": [{ "name": "misc", "count": 4 }]
-    }
-  ]
-}
+{"name":"BambooFox","slug":"BambooFox","ctftime":"https://ctftime.org/ctf/394","years":[{"year":"2021","ctftime":"https://ctftime.org/event/1234","challenges":[{"name":"babystack","category":"misc","path":"BambooFox/2021/babystack","files":6},{"name":"HouseOfCSY","category":"misc","path":"BambooFox/2021/HouseOfCSY","files":6},{"name":"ropot","category":"misc","path":"BambooFox/2021/ropot","files":7},{"name":"wxpage","category":"misc","path":"BambooFox/2021/wxpage","files":7}],"categories":[{"name":"misc","count":4}]}]}

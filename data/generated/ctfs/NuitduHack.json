@@ -1,17 +1,1 @@
-{
-  "ctftime": "https://ctftime.org/ctf/15",
-  "name": "NuitduHack",
-  "slug": "NuitduHack",
-  "years": [
-    {
-      "year": "2018",
-      "ctftime": null,
-      "challenges": [
-        { "name": "BaseX", "category": "Quals", "path": "NuitduHack/2018/Quals/BaseX", "files": 2 },
-        { "name": "meereen", "category": "Quals", "path": "NuitduHack/2018/Quals/meereen", "files": 2 },
-        { "name": "RescueShell", "category": "Quals", "path": "NuitduHack/2018/Quals/RescueShell", "files": 2 }
-      ],
-      "categories": [{ "name": "Quals", "count": 3 }]
-    }
-  ]
-}
+{"name":"NuitduHack","slug":"NuitduHack","ctftime":"https://ctftime.org/ctf/15","years":[{"year":"2018","ctftime":null,"challenges":[{"name":"BaseX","category":"Quals","path":"NuitduHack/2018/Quals/BaseX","files":2},{"name":"meereen","category":"Quals","path":"NuitduHack/2018/Quals/meereen","files":2},{"name":"RescueShell","category":"Quals","path":"NuitduHack/2018/Quals/RescueShell","files":2}],"categories":[{"name":"Quals","count":3}]}]}

@@ -1,18 +1,1 @@
-{
-  "ctftime": "https://ctftime.org/ctf/282",
-  "name": "PwnThyBytes",
-  "slug": "PwnThyBytes",
-  "years": [
-    {
-      "year": "2019",
-      "ctftime": "https://ctftime.org/event/756",
-      "challenges": [
-        { "name": "Ace_of_Spades", "category": "misc", "path": "PwnThyBytes/2019/Ace_of_Spades", "files": 3 },
-        { "name": "BabyFactory", "category": "misc", "path": "PwnThyBytes/2019/BabyFactory", "files": 2 },
-        { "name": "Dystopia", "category": "misc", "path": "PwnThyBytes/2019/Dystopia", "files": 4 },
-        { "name": "HeapSchool666", "category": "misc", "path": "PwnThyBytes/2019/HeapSchool666", "files": 4 }
-      ],
-      "categories": [{ "name": "misc", "count": 4 }]
-    }
-  ]
-}
+{"name":"PwnThyBytes","slug":"PwnThyBytes","ctftime":"https://ctftime.org/ctf/282","years":[{"year":"2019","ctftime":"https://ctftime.org/event/756","challenges":[{"name":"Ace_of_Spades","category":"misc","path":"PwnThyBytes/2019/Ace_of_Spades","files":3},{"name":"BabyFactory","category":"misc","path":"PwnThyBytes/2019/BabyFactory","files":2},{"name":"Dystopia","category":"misc","path":"PwnThyBytes/2019/Dystopia","files":4},{"name":"HeapSchool666","category":"misc","path":"PwnThyBytes/2019/HeapSchool666","files":4}],"categories":[{"name":"misc","count":4}]}]}

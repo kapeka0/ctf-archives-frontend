@@ -1,18 +1,1 @@
-{
-  "ctftime": "https://ctftime.org/ctf/438",
-  "name": "VirSecCon",
-  "slug": "VirSecCon",
-  "years": [
-    {
-      "year": "2020",
-      "ctftime": "https://ctftime.org/event/1032",
-      "challenges": [
-        { "name": "BuffTheBarque", "category": "misc", "path": "VirSecCon/2020/BuffTheBarque", "files": 1 },
-        { "name": "ReturnLabel", "category": "misc", "path": "VirSecCon/2020/ReturnLabel", "files": 1 },
-        { "name": "SeedSpring", "category": "misc", "path": "VirSecCon/2020/SeedSpring", "files": 1 },
-        { "name": "ShoppingList", "category": "misc", "path": "VirSecCon/2020/ShoppingList", "files": 1 }
-      ],
-      "categories": [{ "name": "misc", "count": 4 }]
-    }
-  ]
-}
+{"name":"VirSecCon","slug":"VirSecCon","ctftime":"https://ctftime.org/ctf/438","years":[{"year":"2020","ctftime":"https://ctftime.org/event/1032","challenges":[{"name":"BuffTheBarque","category":"misc","path":"VirSecCon/2020/BuffTheBarque","files":1},{"name":"ReturnLabel","category":"misc","path":"VirSecCon/2020/ReturnLabel","files":1},{"name":"SeedSpring","category":"misc","path":"VirSecCon/2020/SeedSpring","files":1},{"name":"ShoppingList","category":"misc","path":"VirSecCon/2020/ShoppingList","files":1}],"categories":[{"name":"misc","count":4}]}]}

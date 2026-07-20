@@ -1,18 +1,1 @@
-{
-  "ctftime": "https://ctftime.org/ctf/1492",
-  "name": "UNSDG",
-  "slug": "UNSDG",
-  "years": [
-    {
-      "year": "2026",
-      "ctftime": "https://ctftime.org/event/3184",
-      "challenges": [
-        { "name": "Encrypted_Audit_Logs", "category": "misc", "path": "UNSDG/2026/Encrypted_Audit_Logs", "files": 2 },
-        { "name": "Patient_Zero", "category": "misc", "path": "UNSDG/2026/Patient_Zero", "files": 2 },
-        { "name": "Prescription_Pad", "category": "misc", "path": "UNSDG/2026/Prescription_Pad", "files": 2 },
-        { "name": "Vital_Signs", "category": "misc", "path": "UNSDG/2026/Vital_Signs", "files": 2 }
-      ],
-      "categories": [{ "name": "misc", "count": 4 }]
-    }
-  ]
-}
+{"name":"UNSDG","slug":"UNSDG","ctftime":"https://ctftime.org/ctf/1492","years":[{"year":"2026","ctftime":"https://ctftime.org/event/3184","challenges":[{"name":"Encrypted_Audit_Logs","category":"misc","path":"UNSDG/2026/Encrypted_Audit_Logs","files":2},{"name":"Patient_Zero","category":"misc","path":"UNSDG/2026/Patient_Zero","files":2},{"name":"Prescription_Pad","category":"misc","path":"UNSDG/2026/Prescription_Pad","files":2},{"name":"Vital_Signs","category":"misc","path":"UNSDG/2026/Vital_Signs","files":2}],"categories":[{"name":"misc","count":4}]}]}

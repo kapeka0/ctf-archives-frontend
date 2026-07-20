@@ -1,18 +1,1 @@
-{
-  "ctftime": "https://ctftime.org/ctf/115",
-  "name": "HackCon",
-  "slug": "HackCon",
-  "years": [
-    {
-      "year": "2018",
-      "ctftime": "https://ctftime.org/event/652",
-      "challenges": [
-        { "name": "BOF", "category": "misc", "path": "HackCon/2018/BOF", "files": 1 },
-        { "name": "SheSellsSeaShells", "category": "misc", "path": "HackCon/2018/SheSellsSeaShells", "files": 1 },
-        { "name": "SimpleYetElegent", "category": "misc", "path": "HackCon/2018/SimpleYetElegent", "files": 1 },
-        { "name": "WarChange", "category": "misc", "path": "HackCon/2018/WarChange", "files": 1 }
-      ],
-      "categories": [{ "name": "misc", "count": 4 }]
-    }
-  ]
-}
+{"name":"HackCon","slug":"HackCon","ctftime":"https://ctftime.org/ctf/115","years":[{"year":"2018","ctftime":"https://ctftime.org/event/652","challenges":[{"name":"BOF","category":"misc","path":"HackCon/2018/BOF","files":1},{"name":"SheSellsSeaShells","category":"misc","path":"HackCon/2018/SheSellsSeaShells","files":1},{"name":"SimpleYetElegent","category":"misc","path":"HackCon/2018/SimpleYetElegent","files":1},{"name":"WarChange","category":"misc","path":"HackCon/2018/WarChange","files":1}],"categories":[{"name":"misc","count":4}]}]}

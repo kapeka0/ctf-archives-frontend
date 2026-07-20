@@ -1,18 +1,1 @@
-{
-  "ctftime": "https://ctftime.org/ctf/455",
-  "name": "PoseidonCTF",
-  "slug": "PoseidonCTF",
-  "years": [
-    {
-      "year": "2020",
-      "ctftime": "https://ctftime.org/event/1049",
-      "challenges": [
-        { "name": "Cards", "category": "misc", "path": "PoseidonCTF/2020/Cards", "files": 3 },
-        { "name": "groceryshop", "category": "misc", "path": "PoseidonCTF/2020/groceryshop", "files": 6 },
-        { "name": "Oldnote", "category": "misc", "path": "PoseidonCTF/2020/Oldnote", "files": 3 },
-        { "name": "vmrevenge", "category": "misc", "path": "PoseidonCTF/2020/vmrevenge", "files": 6 }
-      ],
-      "categories": [{ "name": "misc", "count": 4 }]
-    }
-  ]
-}
+{"name":"PoseidonCTF","slug":"PoseidonCTF","ctftime":"https://ctftime.org/ctf/455","years":[{"year":"2020","ctftime":"https://ctftime.org/event/1049","challenges":[{"name":"Cards","category":"misc","path":"PoseidonCTF/2020/Cards","files":3},{"name":"groceryshop","category":"misc","path":"PoseidonCTF/2020/groceryshop","files":6},{"name":"Oldnote","category":"misc","path":"PoseidonCTF/2020/Oldnote","files":3},{"name":"vmrevenge","category":"misc","path":"PoseidonCTF/2020/vmrevenge","files":6}],"categories":[{"name":"misc","count":4}]}]}

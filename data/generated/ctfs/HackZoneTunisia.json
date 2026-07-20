@@ -1,17 +1,1 @@
-{
-  "ctftime": "https://ctftime.org/ctf/102",
-  "name": "HackZoneTunisia",
-  "slug": "HackZoneTunisia",
-  "years": [
-    {
-      "year": "2020",
-      "ctftime": "https://ctftime.org/event/1029",
-      "challenges": [
-        { "name": "Pwn1", "category": "misc", "path": "HackZoneTunisia/2020/Pwn1", "files": 1 },
-        { "name": "Pwn2", "category": "misc", "path": "HackZoneTunisia/2020/Pwn2", "files": 1 },
-        { "name": "Pwn3", "category": "misc", "path": "HackZoneTunisia/2020/Pwn3", "files": 2 }
-      ],
-      "categories": [{ "name": "misc", "count": 3 }]
-    }
-  ]
-}
+{"name":"HackZoneTunisia","slug":"HackZoneTunisia","ctftime":"https://ctftime.org/ctf/102","years":[{"year":"2020","ctftime":"https://ctftime.org/event/1029","challenges":[{"name":"Pwn1","category":"misc","path":"HackZoneTunisia/2020/Pwn1","files":1},{"name":"Pwn2","category":"misc","path":"HackZoneTunisia/2020/Pwn2","files":1},{"name":"Pwn3","category":"misc","path":"HackZoneTunisia/2020/Pwn3","files":2}],"categories":[{"name":"misc","count":3}]}]}

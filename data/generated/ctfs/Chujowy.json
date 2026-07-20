@@ -1,16 +1,1 @@
-{
-  "ctftime": "https://ctftime.org/ctf/484",
-  "name": "Chujowy",
-  "slug": "Chujowy",
-  "years": [
-    {
-      "year": "2020",
-      "ctftime": "https://ctftime.org/event/1087",
-      "challenges": [
-        { "name": "FordCPU_DMA", "category": "misc", "path": "Chujowy/2020/FordCPU_DMA", "files": 3 },
-        { "name": "FordCPU_FlagDevice", "category": "misc", "path": "Chujowy/2020/FordCPU_FlagDevice", "files": 3 }
-      ],
-      "categories": [{ "name": "misc", "count": 2 }]
-    }
-  ]
-}
+{"name":"Chujowy","slug":"Chujowy","ctftime":"https://ctftime.org/ctf/484","years":[{"year":"2020","ctftime":"https://ctftime.org/event/1087","challenges":[{"name":"FordCPU_DMA","category":"misc","path":"Chujowy/2020/FordCPU_DMA","files":3},{"name":"FordCPU_FlagDevice","category":"misc","path":"Chujowy/2020/FordCPU_FlagDevice","files":3}],"categories":[{"name":"misc","count":2}]}]}

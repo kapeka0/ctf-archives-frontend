@@ -1,17 +1,1 @@
-{
-  "ctftime": "https://ctftime.org/ctf/425",
-  "name": "AUCTF",
-  "slug": "AUCTF",
-  "years": [
-    {
-      "year": "2020",
-      "ctftime": "https://ctftime.org/event/1020",
-      "challenges": [
-        { "name": "HouseOfMadness", "category": "misc", "path": "AUCTF/2020/HouseOfMadness", "files": 1 },
-        { "name": "RemoteSchool", "category": "misc", "path": "AUCTF/2020/RemoteSchool", "files": 1 },
-        { "name": "ThanksgivingDinner", "category": "misc", "path": "AUCTF/2020/ThanksgivingDinner", "files": 1 }
-      ],
-      "categories": [{ "name": "misc", "count": 3 }]
-    }
-  ]
-}
+{"name":"AUCTF","slug":"AUCTF","ctftime":"https://ctftime.org/ctf/425","years":[{"year":"2020","ctftime":"https://ctftime.org/event/1020","challenges":[{"name":"HouseOfMadness","category":"misc","path":"AUCTF/2020/HouseOfMadness","files":1},{"name":"RemoteSchool","category":"misc","path":"AUCTF/2020/RemoteSchool","files":1},{"name":"ThanksgivingDinner","category":"misc","path":"AUCTF/2020/ThanksgivingDinner","files":1}],"categories":[{"name":"misc","count":3}]}]}

@@ -1,13 +1,1 @@
-{
-  "ctftime": "https://ctftime.org/ctf/373",
-  "name": "SyskronSecurity",
-  "slug": "SyskronSecurity",
-  "years": [
-    {
-      "year": "2020",
-      "ctftime": "https://ctftime.org/event/1148",
-      "challenges": [{ "name": "HID", "category": "misc", "path": "SyskronSecurity/2020/HID", "files": 1 }],
-      "categories": [{ "name": "misc", "count": 1 }]
-    }
-  ]
-}
+{"name":"SyskronSecurity","slug":"SyskronSecurity","ctftime":"https://ctftime.org/ctf/373","years":[{"year":"2020","ctftime":"https://ctftime.org/event/1148","challenges":[{"name":"HID","category":"misc","path":"SyskronSecurity/2020/HID","files":1}],"categories":[{"name":"misc","count":1}]}]}

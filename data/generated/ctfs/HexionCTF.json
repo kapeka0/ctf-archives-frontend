@@ -1,18 +1,1 @@
-{
-  "ctftime": "https://ctftime.org/ctf/415",
-  "name": "HexionCTF",
-  "slug": "HexionCTF",
-  "years": [
-    {
-      "year": "2020",
-      "ctftime": "https://ctftime.org/event/1014",
-      "challenges": [
-        { "name": "Hangman", "category": "misc", "path": "HexionCTF/2020/Hangman", "files": 3 },
-        { "name": "TextDecorator", "category": "misc", "path": "HexionCTF/2020/TextDecorator", "files": 4 },
-        { "name": "TicTacToe", "category": "misc", "path": "HexionCTF/2020/TicTacToe", "files": 3 },
-        { "name": "WWW", "category": "misc", "path": "HexionCTF/2020/WWW", "files": 3 }
-      ],
-      "categories": [{ "name": "misc", "count": 4 }]
-    }
-  ]
-}
+{"name":"HexionCTF","slug":"HexionCTF","ctftime":"https://ctftime.org/ctf/415","years":[{"year":"2020","ctftime":"https://ctftime.org/event/1014","challenges":[{"name":"Hangman","category":"misc","path":"HexionCTF/2020/Hangman","files":3},{"name":"TextDecorator","category":"misc","path":"HexionCTF/2020/TextDecorator","files":4},{"name":"TicTacToe","category":"misc","path":"HexionCTF/2020/TicTacToe","files":3},{"name":"WWW","category":"misc","path":"HexionCTF/2020/WWW","files":3}],"categories":[{"name":"misc","count":4}]}]}

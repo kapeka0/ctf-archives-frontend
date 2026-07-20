@@ -1,16 +1,1 @@
-{
-  "ctftime": "https://ctftime.org/ctf/470",
-  "name": "CSCML",
-  "slug": "CSCML",
-  "years": [
-    {
-      "year": "2020",
-      "ctftime": "https://ctftime.org/event/1071",
-      "challenges": [
-        { "name": "notes", "category": "misc", "path": "CSCML/2020/notes", "files": 2 },
-        { "name": "strcmp", "category": "misc", "path": "CSCML/2020/strcmp", "files": 1 }
-      ],
-      "categories": [{ "name": "misc", "count": 2 }]
-    }
-  ]
-}
+{"name":"CSCML","slug":"CSCML","ctftime":"https://ctftime.org/ctf/470","years":[{"year":"2020","ctftime":"https://ctftime.org/event/1071","challenges":[{"name":"notes","category":"misc","path":"CSCML/2020/notes","files":2},{"name":"strcmp","category":"misc","path":"CSCML/2020/strcmp","files":1}],"categories":[{"name":"misc","count":2}]}]}

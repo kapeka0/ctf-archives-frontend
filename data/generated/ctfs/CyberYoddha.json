@@ -1,16 +1,1 @@
-{
-  "ctftime": "https://ctftime.org/ctf/542",
-  "name": "CyberYoddha",
-  "slug": "CyberYoddha",
-  "years": [
-    {
-      "year": "2020",
-      "ctftime": "https://ctftime.org/event/1169",
-      "challenges": [
-        { "name": "FormatS", "category": "misc", "path": "CyberYoddha/2020/FormatS", "files": 2 },
-        { "name": "Overflow_1", "category": "misc", "path": "CyberYoddha/2020/Overflow_1", "files": 2 }
-      ],
-      "categories": [{ "name": "misc", "count": 2 }]
-    }
-  ]
-}
+{"name":"CyberYoddha","slug":"CyberYoddha","ctftime":"https://ctftime.org/ctf/542","years":[{"year":"2020","ctftime":"https://ctftime.org/event/1169","challenges":[{"name":"FormatS","category":"misc","path":"CyberYoddha/2020/FormatS","files":2},{"name":"Overflow_1","category":"misc","path":"CyberYoddha/2020/Overflow_1","files":2}],"categories":[{"name":"misc","count":2}]}]}

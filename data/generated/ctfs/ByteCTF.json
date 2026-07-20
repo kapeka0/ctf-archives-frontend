@@ -1,17 +1,1 @@
-{
-  "ctftime": "https://ctftime.org/ctf/340",
-  "name": "ByteCTF",
-  "slug": "ByteCTF",
-  "years": [
-    {
-      "year": "2020",
-      "ctftime": "https://ctftime.org/event/1114",
-      "challenges": [
-        { "name": "ByteCafe", "category": "misc", "path": "ByteCTF/2020/ByteCafe", "files": 2 },
-        { "name": "SleepyAnshul", "category": "misc", "path": "ByteCTF/2020/SleepyAnshul", "files": 1 },
-        { "name": "TheFlagstore", "category": "misc", "path": "ByteCTF/2020/TheFlagstore", "files": 1 }
-      ],
-      "categories": [{ "name": "misc", "count": 3 }]
-    }
-  ]
-}
+{"name":"ByteCTF","slug":"ByteCTF","ctftime":"https://ctftime.org/ctf/340","years":[{"year":"2020","ctftime":"https://ctftime.org/event/1114","challenges":[{"name":"ByteCafe","category":"misc","path":"ByteCTF/2020/ByteCafe","files":2},{"name":"SleepyAnshul","category":"misc","path":"ByteCTF/2020/SleepyAnshul","files":1},{"name":"TheFlagstore","category":"misc","path":"ByteCTF/2020/TheFlagstore","files":1}],"categories":[{"name":"misc","count":3}]}]}

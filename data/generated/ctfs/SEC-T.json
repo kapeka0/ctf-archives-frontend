@@ -1,16 +1,1 @@
-{
-  "ctftime": "https://ctftime.org/ctf/211",
-  "name": "SEC-T",
-  "slug": "SEC-T",
-  "years": [
-    {
-      "year": "2022",
-      "ctftime": "https://ctftime.org/event/1761",
-      "challenges": [
-        { "name": "broadcast", "category": "rev", "path": "SEC-T/2022/rev/broadcast", "files": 1 },
-        { "name": "more_pi", "category": "rev", "path": "SEC-T/2022/rev/more_pi", "files": 1 }
-      ],
-      "categories": [{ "name": "rev", "count": 2 }]
-    }
-  ]
-}
+{"name":"SEC-T","slug":"SEC-T","ctftime":"https://ctftime.org/ctf/211","years":[{"year":"2022","ctftime":"https://ctftime.org/event/1761","challenges":[{"name":"broadcast","category":"rev","path":"SEC-T/2022/rev/broadcast","files":1},{"name":"more_pi","category":"rev","path":"SEC-T/2022/rev/more_pi","files":1}],"categories":[{"name":"rev","count":2}]}]}

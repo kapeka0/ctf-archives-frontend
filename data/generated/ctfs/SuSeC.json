@@ -1,17 +1,1 @@
-{
-  "ctftime": "https://ctftime.org/ctf/418",
-  "name": "SuSeC",
-  "slug": "SuSeC",
-  "years": [
-    {
-      "year": "2020",
-      "ctftime": "https://ctftime.org/event/1007",
-      "challenges": [
-        { "name": "Credentials", "category": "misc", "path": "SuSeC/2020/Credentials", "files": 3 },
-        { "name": "jailbreak", "category": "misc", "path": "SuSeC/2020/jailbreak", "files": 3 },
-        { "name": "unary", "category": "misc", "path": "SuSeC/2020/unary", "files": 2 }
-      ],
-      "categories": [{ "name": "misc", "count": 3 }]
-    }
-  ]
-}
+{"name":"SuSeC","slug":"SuSeC","ctftime":"https://ctftime.org/ctf/418","years":[{"year":"2020","ctftime":"https://ctftime.org/event/1007","challenges":[{"name":"Credentials","category":"misc","path":"SuSeC/2020/Credentials","files":3},{"name":"jailbreak","category":"misc","path":"SuSeC/2020/jailbreak","files":3},{"name":"unary","category":"misc","path":"SuSeC/2020/unary","files":2}],"categories":[{"name":"misc","count":3}]}]}

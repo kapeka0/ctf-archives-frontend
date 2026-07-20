@@ -1,16 +1,1 @@
-{
-  "ctftime": "https://ctftime.org/ctf/504",
-  "name": "AppSecVillage",
-  "slug": "AppSecVillage",
-  "years": [
-    {
-      "year": "2020",
-      "ctftime": "https://ctftime.org/event/1110",
-      "challenges": [
-        { "name": "graph", "category": "misc", "path": "AppSecVillage/2020/graph", "files": 3 },
-        { "name": "MonROPoly", "category": "misc", "path": "AppSecVillage/2020/MonROPoly", "files": 6 }
-      ],
-      "categories": [{ "name": "misc", "count": 2 }]
-    }
-  ]
-}
+{"name":"AppSecVillage","slug":"AppSecVillage","ctftime":"https://ctftime.org/ctf/504","years":[{"year":"2020","ctftime":"https://ctftime.org/event/1110","challenges":[{"name":"graph","category":"misc","path":"AppSecVillage/2020/graph","files":3},{"name":"MonROPoly","category":"misc","path":"AppSecVillage/2020/MonROPoly","files":6}],"categories":[{"name":"misc","count":2}]}]}

@@ -1,18 +1,1 @@
-{
-  "ctftime": "https://ctftime.org/ctf/192",
-  "name": "INShAck",
-  "slug": "INShAck",
-  "years": [
-    {
-      "year": "2019",
-      "ctftime": "https://ctftime.org/event/763",
-      "challenges": [
-        { "name": "gimme-your-shell", "category": "misc", "path": "INShAck/2019/gimme-your-shell", "files": 1 },
-        { "name": "intergover", "category": "misc", "path": "INShAck/2019/intergover", "files": 1 },
-        { "name": "ropberry", "category": "misc", "path": "INShAck/2019/ropberry", "files": 1 },
-        { "name": "signed_or_not_signed", "category": "misc", "path": "INShAck/2019/signed_or_not_signed", "files": 1 }
-      ],
-      "categories": [{ "name": "misc", "count": 4 }]
-    }
-  ]
-}
+{"name":"INShAck","slug":"INShAck","ctftime":"https://ctftime.org/ctf/192","years":[{"year":"2019","ctftime":"https://ctftime.org/event/763","challenges":[{"name":"gimme-your-shell","category":"misc","path":"INShAck/2019/gimme-your-shell","files":1},{"name":"intergover","category":"misc","path":"INShAck/2019/intergover","files":1},{"name":"ropberry","category":"misc","path":"INShAck/2019/ropberry","files":1},{"name":"signed_or_not_signed","category":"misc","path":"INShAck/2019/signed_or_not_signed","files":1}],"categories":[{"name":"misc","count":4}]}]}

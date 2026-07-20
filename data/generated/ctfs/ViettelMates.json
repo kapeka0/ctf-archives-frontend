@@ -1,17 +1,1 @@
-{
-  "ctftime": "https://ctftime.org/ctf/255",
-  "name": "ViettelMates",
-  "slug": "ViettelMates",
-  "years": [
-    {
-      "year": "2018",
-      "ctftime": "https://ctftime.org/event/629",
-      "challenges": [
-        { "name": "fruitretailer", "category": "misc", "path": "ViettelMates/2018/fruitretailer", "files": 1 },
-        { "name": "maxsetting", "category": "misc", "path": "ViettelMates/2018/maxsetting", "files": 2 },
-        { "name": "unexp", "category": "misc", "path": "ViettelMates/2018/unexp", "files": 3 }
-      ],
-      "categories": [{ "name": "misc", "count": 3 }]
-    }
-  ]
-}
+{"name":"ViettelMates","slug":"ViettelMates","ctftime":"https://ctftime.org/ctf/255","years":[{"year":"2018","ctftime":"https://ctftime.org/event/629","challenges":[{"name":"fruitretailer","category":"misc","path":"ViettelMates/2018/fruitretailer","files":1},{"name":"maxsetting","category":"misc","path":"ViettelMates/2018/maxsetting","files":2},{"name":"unexp","category":"misc","path":"ViettelMates/2018/unexp","files":3}],"categories":[{"name":"misc","count":3}]}]}

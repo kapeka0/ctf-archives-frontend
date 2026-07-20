@@ -1,17 +1,1 @@
-{
-  "ctftime": "https://ctftime.org/ctf/602",
-  "name": "Norzh",
-  "slug": "Norzh",
-  "years": [
-    {
-      "year": "2021",
-      "ctftime": "https://ctftime.org/event/1301",
-      "challenges": [
-        { "name": "Malwalker", "category": "rev", "path": "Norzh/2021/rev/Malwalker", "files": 3 },
-        { "name": "Secure_Auth_v0", "category": "rev", "path": "Norzh/2021/rev/Secure_Auth_v0", "files": 2 },
-        { "name": "SUPPLY_ME", "category": "rev", "path": "Norzh/2021/rev/SUPPLY_ME", "files": 2 }
-      ],
-      "categories": [{ "name": "rev", "count": 3 }]
-    }
-  ]
-}
+{"name":"Norzh","slug":"Norzh","ctftime":"https://ctftime.org/ctf/602","years":[{"year":"2021","ctftime":"https://ctftime.org/event/1301","challenges":[{"name":"Malwalker","category":"rev","path":"Norzh/2021/rev/Malwalker","files":3},{"name":"Secure_Auth_v0","category":"rev","path":"Norzh/2021/rev/Secure_Auth_v0","files":2},{"name":"SUPPLY_ME","category":"rev","path":"Norzh/2021/rev/SUPPLY_ME","files":2}],"categories":[{"name":"rev","count":3}]}]}

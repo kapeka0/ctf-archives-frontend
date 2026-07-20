@@ -1,13 +1,1 @@
-{
-  "ctftime": "https://ctftime.org/ctf/401",
-  "name": "HackTM",
-  "slug": "HackTM",
-  "years": [
-    {
-      "year": "2020",
-      "ctftime": null,
-      "challenges": [{ "name": "Quals", "category": "misc", "path": "HackTM/2020/Quals", "files": 10 }],
-      "categories": [{ "name": "misc", "count": 1 }]
-    }
-  ]
-}
+{"name":"HackTM","slug":"HackTM","ctftime":"https://ctftime.org/ctf/401","years":[{"year":"2020","ctftime":null,"challenges":[{"name":"Quals","category":"misc","path":"HackTM/2020/Quals","files":10}],"categories":[{"name":"misc","count":1}]}]}

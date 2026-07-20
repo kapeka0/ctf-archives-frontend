@@ -1,17 +1,1 @@
-{
-  "ctftime": "https://ctftime.org/ctf/129",
-  "name": "Blaze",
-  "slug": "Blaze",
-  "years": [
-    {
-      "year": "2019",
-      "ctftime": "https://ctftime.org/event/790",
-      "challenges": [
-        { "name": "bfkush1", "category": "misc", "path": "Blaze/2019/bfkush1", "files": 1 },
-        { "name": "diy", "category": "misc", "path": "Blaze/2019/diy", "files": 1 },
-        { "name": "SimpleWasm", "category": "misc", "path": "Blaze/2019/SimpleWasm", "files": 3 }
-      ],
-      "categories": [{ "name": "misc", "count": 3 }]
-    }
-  ]
-}
+{"name":"Blaze","slug":"Blaze","ctftime":"https://ctftime.org/ctf/129","years":[{"year":"2019","ctftime":"https://ctftime.org/event/790","challenges":[{"name":"bfkush1","category":"misc","path":"Blaze/2019/bfkush1","files":1},{"name":"diy","category":"misc","path":"Blaze/2019/diy","files":1},{"name":"SimpleWasm","category":"misc","path":"Blaze/2019/SimpleWasm","files":3}],"categories":[{"name":"misc","count":3}]}]}

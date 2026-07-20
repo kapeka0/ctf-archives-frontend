@@ -1,18 +1,1 @@
-{
-  "ctftime": "https://ctftime.org/ctf/446",
-  "name": "rgbCTF",
-  "slug": "rgbCTF",
-  "years": [
-    {
-      "year": "2020",
-      "ctftime": "https://ctftime.org/event/1042",
-      "challenges": [
-        { "name": "rop_bop", "category": "misc", "path": "rgbCTF/2020/rop_bop", "files": 1 },
-        { "name": "soda_pop_bop", "category": "misc", "path": "rgbCTF/2020/soda_pop_bop", "files": 2 },
-        { "name": "timemachine", "category": "misc", "path": "rgbCTF/2020/timemachine", "files": 1 },
-        { "name": "too_slow", "category": "misc", "path": "rgbCTF/2020/too_slow", "files": 1 }
-      ],
-      "categories": [{ "name": "misc", "count": 4 }]
-    }
-  ]
-}
+{"name":"rgbCTF","slug":"rgbCTF","ctftime":"https://ctftime.org/ctf/446","years":[{"year":"2020","ctftime":"https://ctftime.org/event/1042","challenges":[{"name":"rop_bop","category":"misc","path":"rgbCTF/2020/rop_bop","files":1},{"name":"soda_pop_bop","category":"misc","path":"rgbCTF/2020/soda_pop_bop","files":2},{"name":"timemachine","category":"misc","path":"rgbCTF/2020/timemachine","files":1},{"name":"too_slow","category":"misc","path":"rgbCTF/2020/too_slow","files":1}],"categories":[{"name":"misc","count":4}]}]}

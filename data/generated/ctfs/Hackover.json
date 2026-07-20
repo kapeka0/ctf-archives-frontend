@@ -1,13 +1,1 @@
-{
-  "ctftime": "https://ctftime.org/ctf/122",
-  "name": "Hackover",
-  "slug": "Hackover",
-  "years": [
-    {
-      "year": "2018",
-      "ctftime": "https://ctftime.org/event/689",
-      "challenges": [{ "name": "cloud-note", "category": "misc", "path": "Hackover/2018/cloud-note", "files": 3 }],
-      "categories": [{ "name": "misc", "count": 1 }]
-    }
-  ]
-}
+{"name":"Hackover","slug":"Hackover","ctftime":"https://ctftime.org/ctf/122","years":[{"year":"2018","ctftime":"https://ctftime.org/event/689","challenges":[{"name":"cloud-note","category":"misc","path":"Hackover/2018/cloud-note","files":3}],"categories":[{"name":"misc","count":1}]}]}
