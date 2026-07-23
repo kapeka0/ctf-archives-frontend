@@ -19,7 +19,7 @@ const LANGS = [
   { code: "en", flag: "/images/flags/united-kingdom.svg" },
   { code: "es", flag: "/images/flags/spain.svg" },
   { code: "zh", flag: "/images/flags/china.svg" },
-  { code: "ko", flag: "/images/flags/japan.svg" },
+  { code: "ko", flag: "/images/flags/south-korea.svg" },
 ] as const;
 
 export default function LangToggle() {
