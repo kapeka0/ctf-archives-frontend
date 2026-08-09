@@ -1,7 +1,5 @@
-import { GeistMono } from "geist/font/mono";
 import { Caveat } from "next/font/google";
-
-const caveat = Caveat({ subsets: ["latin"], variable: "--font-caveat", display: "swap" });
+import { GeistMono } from "geist/font/mono";
 
 // @ts-ignore - allow global CSS side-effect import in Next.js app directory
 import "../globals.css";
@@ -11,7 +9,6 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
-
 import { Toaster as HotToaster } from "react-hot-toast";
 
 import { ConvexClientProvider } from "@/components/providers/ConvexClientProvider";
@@ -20,6 +17,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { i18nConfig } from "@/i18n/i18nConfig";
 import { routing } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
+
+const caveat = Caveat({ subsets: ["latin"], variable: "--font-caveat", display: "swap" });
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -56,7 +55,7 @@ export default async function RootLayout({
       <head>
         <link rel="icon" href="/images/logos/logo.svg" type="image/svg+xml" sizes="any" />
       </head>
-      <body className={cn(caveat.className, "h-full antialiased")}>
+      <body className={cn(GeistMono.className, "h-full antialiased")}>
         <ConvexClientProvider>
           <NextIntlClientProvider messages={messages}>
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>

@@ -77,14 +77,20 @@ function SiteNavbar() {
           <Wordmark />
         </Link>
         <div className="flex items-center gap-0.5">
-          <ExternalLink
-            className="flex items-center justify-center rounded-full p-2 text-muted-foreground transition-colors hover:text-foreground"
-            href="https://github.com/kapeka0/ctf-archives-frontend"
-            rel="noopener noreferrer"
-            target="_blank"
+          <Button
+            asChild
+            className="size-8 rounded-full text-muted-foreground hover:text-foreground"
+            size="icon"
+            variant="ghost"
           >
-            <Image alt="GitHub" height={18} src="/images/icons/github.svg" width={18} className="dark:invert" />
-          </ExternalLink>
+            <ExternalLink
+              href="https://github.com/kapeka0/ctf-archives-frontend"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <Image alt="GitHub" className="dark:invert" height={18} src="/images/icons/github.svg" width={18} />
+            </ExternalLink>
+          </Button>
           <ThemeToggle />
           <LangToggle />
           <Unauthenticated>

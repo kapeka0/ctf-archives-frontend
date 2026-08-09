@@ -26,16 +26,17 @@ export default async function Home({ params }: Props) {
 
   return (
     <MaxWidthWrapper className="py-14 sm:py-20">
-      <section className="mx-auto max-w-2xl text-center">
+      <section className="mx-auto max-w-2xl font-hero text-center">
         <h1 className="text-pretty text-5xl font-semibold leading-[1.05] tracking-tight sm:text-6xl">
           {t("titleLead")}{" "}
           <span className="font-mono font-medium">
             <span className="text-brand">{"{"}</span>
-            {t("titleFlag")}s
-            <span className="text-brand">{"}"}</span>
+            {t("titleFlag")}s<span className="text-brand">{"}"}</span>
           </span>
         </h1>
-        <p className="mx-auto mt-5 max-w-xl text-pretty text-xl leading-relaxed text-muted-foreground">{t("subtitle")}</p>
+        <p className="mx-auto mt-5 max-w-xl text-pretty text-xl leading-relaxed text-muted-foreground">
+          {t("subtitle")}
+        </p>
 
         <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
           <Link href="/submit">

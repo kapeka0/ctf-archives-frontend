@@ -74,7 +74,8 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-caveat);
+  --font-sans: var(--font-geist-mono);
+  --font-hero: var(--font-caveat);
   --font-mono: var(--font-geist-mono);
 
   --radius-sm: calc(var(--radius) - 4px);
