@@ -7,9 +7,8 @@ import "./lib/env/server";
 const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
 
 const nextConfig: NextConfig = {
-  experimental: {
-    useCache: true,
-  },
+  cacheComponents: true,
+  partialPrefetching: true,
 };
 
 export default withNextIntl(nextConfig);

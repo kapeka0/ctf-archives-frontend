@@ -41,15 +41,15 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>;
 }>) {
   const { locale } = await params;
-  const messages = await getMessages();
-  const cookieStore = await cookies();
-  const cookieLocale = cookieStore.get("NEXT_LOCALE")?.value;
 
   if (!routing.locales.includes(locale as any)) {
-    console.log("No locale");
+    const cookieLocale = (await cookies()).get("NEXT_LOCALE")?.value;
     return redirect(`/${cookieLocale || i18nConfig.defaultLocale}/not-found`);
   }
+
   setRequestLocale(locale);
+  const messages = await getMessages();
+
   return (
     <html lang={locale} className={cn(caveat.variable, GeistMono.variable)} suppressHydrationWarning>
       <head>
