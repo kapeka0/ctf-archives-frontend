@@ -34,7 +34,7 @@ export default async function Home({ params }: Props) {
             {t("titleFlag")}s<span className="text-brand">{"}"}</span>
           </span>
         </h1>
-        <p className="mx-auto mt-5 max-w-xl text-pretty text-xl leading-relaxed text-muted-foreground">
+        <p className="mx-auto mt-5 max-w-xl text-pretty font-mono text-xl leading-relaxed text-muted-foreground">
           {t("subtitle")}
         </p>
 

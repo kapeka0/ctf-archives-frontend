@@ -74,7 +74,7 @@ function SiteNavbar() {
     <header className="pointer-events-none fixed inset-x-0 top-3 z-50 flex justify-center px-3">
       <nav className="pointer-events-auto flex w-full max-w-3xl items-center justify-between gap-2 rounded-full border border-border bg-background/70 py-2 pl-4 pr-2 shadow-sm backdrop-blur-md">
         <Link className="transition-opacity hover:opacity-70" href="/">
-          <Wordmark />
+          <Wordmark className="[&>span:last-child]:font-hero" />
         </Link>
         <div className="flex items-center gap-0.5">
           <Button
